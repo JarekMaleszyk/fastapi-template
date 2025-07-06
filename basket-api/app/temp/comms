@@ -1,0 +1,18 @@
+# 1. Inicjuj projekt
+poetry new myapi --src
+cd myapi
+
+# 2. Dodaj zależności
+poetry add fastapi uvicorn sqlalchemy psycopg2-binary alembic python-dotenv
+
+# 3. Dodaj pliki: main.py, database.py, models.py itd.
+# 4. Uruchom
+poetry run uvicorn myapi.main:app --reload
+
+
+2nd option: 
+poetry new myapi --src
+cd myapi
+poetry add fastapi uvicorn sqlalchemy psycopg2-binary alembic python-dotenv
+poetry shell
+uvicorn myapi.main:app --reload
